@@ -11,3 +11,9 @@ export const Box = styled.div`
   box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
   border-radius: 20px;
 `;
+
+export const Wrapper = styled.div`
+  width: calc(100vw - 100px);
+  height: 100%;
+  margin: 0px auto;
+`;
