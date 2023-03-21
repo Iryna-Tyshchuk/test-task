@@ -27,7 +27,7 @@ export const App = () => {
       {users.length > 0 && (
         <UsersList>
           {users.map(({ id, ...info }) => (
-            <UserCard key={id} info={info} />
+            <UserCard key={id} info={info} id={id} />
           ))}
         </UsersList>
       )}

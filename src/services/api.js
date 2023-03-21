@@ -8,6 +8,6 @@ export async function getUsers() {
 }
 
 export const postUser = async updatedUser => {
-  const { data } = await axios.post('/users', updatedUser);
+  const { data } = await axios.put(`/users/${updatedUser.id}`, updatedUser);
   return data;
 };

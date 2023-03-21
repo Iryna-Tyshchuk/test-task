@@ -31,7 +31,15 @@ const usersSlice = createSlice({
       .addCase(updateUser.pending, pendingHandler)
       .addCase(updateUser.fulfilled, (state, { payload }) => {
         state.isLoading = false;
-        state.users = [...state.users, payload];
+        state.users = state.users.map(el => {
+          return el.id === payload.id
+            ? {
+                ...el,
+                following: payload.following,
+                followers: payload.followers,
+              }
+            : el;
+        });
       })
       .addCase(updateUser.rejected, rejectHandler);
   },

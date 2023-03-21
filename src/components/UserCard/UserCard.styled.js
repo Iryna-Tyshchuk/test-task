@@ -108,11 +108,7 @@ export const Button = styled.button`
   line-height: 1.22;
   color: #373737;
   text-transform: uppercase;
-  transition: transform 500ms cubic-bezier(0.39, 0.575, 0.565, 1);
-  &:hover,
-  &:focus {
-    transform: scale(0.9);
-  }
+  transition: transform 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
 `;
 
 export const UserName = styled.div`
@@ -127,5 +123,5 @@ export const UserName = styled.div`
   bottom: 0;
   right: 10%;
   opacity: 1;
-  transition: opacity 500ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: opacity 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
 `;
