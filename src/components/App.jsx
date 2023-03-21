@@ -1,14 +1,15 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchUsers } from 'redux/users/operations';
-import { selectUsers } from 'redux/users/selectors';
+import { selectLoading, selectUsers } from 'redux/users/selectors';
 import { Wrapper } from './App.styled';
+import { Loader } from './Loader/Loader';
 import { UserCard } from './UserCard/UserCard';
 import { UsersList } from './UsersList/UsersList.styled';
 
 export const App = () => {
   const users = useSelector(selectUsers);
-  // const isLoading = useSelector(selectLoading);
+  const isLoading = useSelector(selectLoading);
   // const error = useSelector(selectError);
   const dispatch = useDispatch();
 
@@ -31,6 +32,7 @@ export const App = () => {
           ))}
         </UsersList>
       )}
+      {isLoading && <Loader />}
     </Wrapper>
   );
 };

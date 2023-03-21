@@ -121,7 +121,7 @@ export const UserName = styled.div`
   color: #ebd8ff;
   position: absolute;
   bottom: 0;
-  right: 10%;
+  left: 10%;
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.39, 0.575, 0.565, 1);
 `;
